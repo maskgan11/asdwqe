@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telegram Web App Example</title>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <script>
+        // Инициализация SDK Telegram Web App
+        Telegram.WebApp.init();
+
+        // Получение информации о пользователе
+        const user = Telegram.WebApp.initDataUnsafe;
+        console.log(user); // Логирование данных пользователя в консоль
+
+        // Пример отправки сообщения в Telegram через Web App
+        function sendMessage() {
+            Telegram.WebApp.sendData('Hello from Web App!');
+        }
+    </script>
+</head>
+<body>
+    <h1>Telegram Web App</h1>
+    <p>Это веб-приложение, интегрированное с Telegram.</p>
+    <button onclick="sendMessage()">Отправить сообщение в Telegram</button>
+</body>
+</html>
